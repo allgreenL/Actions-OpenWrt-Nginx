@@ -93,7 +93,7 @@ jobs:
         cd openwrt
         chmod +x $DIY_SH
         ./$DIY_SH >/dev/null
-        [ -e $X86_64_office.config ] && mv $X86_64_office.config .config
+        [ -e X86_64_office.config ] && mv X86_64_office.config .config
         [ ${{ github.event.repository.owner.id }} != '48883331' ] && {
         sed -i "s/=m/=n/g" .config
         }
